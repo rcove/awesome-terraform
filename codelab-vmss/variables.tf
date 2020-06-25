@@ -1,13 +1,29 @@
+variable "azure_subscription_id" {}
+variable "azure_client_id" {}
+variable "azure_client_secret" {}
+variable "azure_tenant_id" {}
+
+# Configure the Azure Provider
+provider "azurerm" {
+  features {
+  }
+  subscription_id = var.azure_subscription_id
+  client_id       = var.azure_client_id       
+  client_secret   = var.azure_client_secret   
+  tenant_id       = var.azure_tenant_id       
+}
+
 variable "location" {
   description = "The location where resources will be created"
+  default = "West US"
 }
 
 variable "tags" {
   description = "A map of the tags to use for the resources that are deployed"
-  type        = "map"
+  type        = map
 
   default = {
-    environment = "codelab"
+    env = "dev"
   }
 }
 
@@ -17,7 +33,7 @@ variable "resource_group_name" {
 }
 
 variable "application_port" {
-  description = "The port that you want to expose to the external load balancer"
+  description = "The port that you want to expose to the load balancer"
   default     = 80
 }
 

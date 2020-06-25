@@ -289,3 +289,15 @@ __pycache__/
 *.btm.cs
 *.odx.cs
 *.xsd.cs
+
+#  Local .terraform directories
+**/.terraform/*
+
+# .tfstate files
+*.tfstate
+*.tfstate.*
+
+# .tfvars files
+*.tfvars
+manager.sh
+*.rsa

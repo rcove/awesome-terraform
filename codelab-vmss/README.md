@@ -3,12 +3,14 @@ Terraform deployment of VM Scale Set
 
 This folder has the complete code presented in the [Terraform for VMSS codelab](https://docs.microsoft.com/en-us/azure/terraform/terraform-create-vm-scaleset-network-disks-hcl).
 
+Modified for tf version 0.12 
+LB is internal 
 
 This codelab deploys the following resources to your Azure subscription:
 
 * A virtual network with the CIDR 10.0.0.0/16
-* Two public IP addresses
-* An Azure load balancer
+* public IP address
+* An Azure load balancer (internal)
 * A virtual machine scale set attached to the vnet
 * A virtual machine connected to the vnet
 
